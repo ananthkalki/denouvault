@@ -61,7 +61,7 @@ function Card(props: CardProps) {
         </div>
         <div>
           <button onClick={toggleExpansion}>
-            <FontAwesomeIcon icon={faArrowDown} />
+            <FontAwesomeIcon icon={faArrowDown} color="black" />
           </button>
         </div>
       </div>
