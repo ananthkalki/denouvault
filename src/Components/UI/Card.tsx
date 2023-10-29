@@ -13,6 +13,22 @@ function Card(props: CardProps) {
   const toggleExpansion = () => {
     setIsExpanded(!isExpanded);
   };
+  const [buttonLabel, setButtonLabel] = useState('Farm');
+  const [paraLabel, setParaLabel] = useState('Enable Farm');
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClick = () => {
+    if (buttonLabel === 'Farm') {
+      setButtonLabel('Stake');
+      setParaLabel('Stake ETH - USD');
+    } else if (buttonLabel === 'Stake') {
+      setShowModal(true);
+    }
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   return (
     <div
@@ -53,15 +69,41 @@ function Card(props: CardProps) {
       {isExpanded && (
         <div className={styles.expandedSection}>
           <div className={styles.detailContainer}>
-            <div style={{ textAlign: "left" }}>
-              <p style={{fontSize:'20px', margin:'0'}}>Mallow earned</p>
-              <p>0</p>
+            <div className={styles.gridContainer}>
+                <div className={styles.topLeft}>
+                <p style={{ fontSize: '17px', margin: '0' }}>Mallow earned</p>
+                </div>
+                <div className={styles.bottomLeft}>
+                <p>0</p>
+                </div>
+                <div className={styles.bottomRight}>
+                <button className={styles.detailButton}>Harvest</button>
+                </div>
             </div>
-            <button className={styles.detailButton}>Harvest</button>
-          </div>
+        </div>
+
           <div className={styles.columnDetailContainer}>
-            <p style={{ textAlign: "left",fontSize:'20px' }}>kalki</p>
-            <button className={styles.columnButton}>Harvest</button>
+            <p style={{ textAlign: "left",fontSize:'17px', marginBottom:'10px', marginTop:'10px' }}>{paraLabel}</p>
+            <button className={styles.columnButton} onClick={handleClick}>
+                {buttonLabel}
+            </button>
+            {showModal && (
+                <div className={styles.modal}>
+                <div className={styles.modalContent}>
+                    <h2>Stake LP Tokens</h2>
+                    <div className={styles.grid}>
+                    <div>Stake</div>
+                    <div>Balance:0.013911246766 </div>
+                    <div><input type='number' placeholder='0' style={{border:0, width:'40px'}}/></div>
+                    <div>MAX : ETH - USD</div>
+                    </div>
+                    <div className={styles.buttonContainer}>
+                        <button style={{backgroundColor:"red", color:'white'}} onClick={closeModal}>Close</button>
+                        <button >confirm</button>
+                    </div>
+                </div>
+                </div>
+            )}
           </div>
         </div>
       )}

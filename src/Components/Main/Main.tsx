@@ -9,7 +9,7 @@ function Main(){
         // justifyContent: 'center',
         alignItems: 'center',
         padding:'10vh 2vw',
-        backgroundColor: '#151516',
+        background: 'linear-gradient(to bottom, #FEEFCC, #DF985A, #7C552F, #FFF2C3)',
         height: '100vh',
     }
     return(

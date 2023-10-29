@@ -9,8 +9,8 @@ function Search(){
         height: '2rem',
         borderRadius: '2rem',
         border: '1px solid #9ff3ff',
-        backgroundColor: 'transparent',
-        color:'white',
+        backgroundColor: 'white',
+        color:'black',
     };
     
     return(
