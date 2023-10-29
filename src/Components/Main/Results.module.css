@@ -1,0 +1,41 @@
+/* CSS for the grid layout */
+.columnContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 0.25fr; /* Adjust the column sizes as needed */
+    grid-gap: 10px; /* Adjust the gap between grid items as needed */
+    align-items: center; /* Center items vertically within the row */
+  }
+  
+  /* Style for each grid item (div) */
+  .columnContainer > div {
+    padding: 16px;
+    text-align: left;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+  }
+  
+  /* Style for headings (h3, h4) */
+  .columnContainer h3 {
+    font-size: 18px;    
+  }
+  
+  .columnContainer h4 {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+  }
+  
+  /* Style for the button */
+  .columnContainer button {
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: transparent;
+    color: wheat;
+
+  }
+  
+  /* Style for the first grid item to make it bigger */
+  .columnContainer > div:first-child {
+    grid-column: span 2; /* Make it span 2 columns */
+  }
+  

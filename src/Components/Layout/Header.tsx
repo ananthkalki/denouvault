@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './logo.svg'
+import logo from './logo.svg';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 function Header(){
   const headerStyle = {
@@ -10,18 +11,10 @@ function Header(){
     backgroundColor: '#131619',
   };
 
-  const buttonStyle = {
-    padding: '15px 25px',
-    fontSize: '16px',
-    border:'0',
-    borderRadius: '12px',
-    backgroundColor: '#9ff3ff',
-  };
-
   return (
     <div style={headerStyle}>
       <img src={logo} alt="My Icon" />
-      <button style={buttonStyle}>Connect Wallet</button>
+      <ConnectButton />
     </div>
   );
 };

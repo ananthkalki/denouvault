@@ -1,0 +1,110 @@
+.card {
+    padding: 0.5em 0.5em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    background-color: #19191a;
+    height: 12vh;
+    color:white;
+  } 
+
+  .expanded {
+    transition: height 0.5s ease; /* Add a smooth transition for the height property */
+  }
+
+  /* CSS for the grid layout */
+.columnContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 0.25fr; /* Adjust the column sizes as needed */
+    grid-gap: 10px; /* Adjust the gap between grid items as needed */
+    align-items: center; /* Center items vertically within the row */
+  }
+  
+  /* Style for each grid item (div) */
+  .columnContainer > div {
+    padding: 16px 16px 0px 16px;
+    text-align: left;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+  }
+  
+  /* Style for headings (h3, h4) */
+  .columnContainer h3 {
+    font-size: 18px;    
+  }
+  
+  .columnContainer h4 {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+  }
+  
+  /* Style for the button */
+  .columnContainer button {
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: transparent;
+    color: wheat;
+
+  }
+  
+  /* Style for the first grid item to make it bigger */
+  .columnContainer > div:first-child {
+    grid-column: span 2; /* Make it span 2 columns */
+  }
+  
+  /* Styles for the expanded section */
+.expandedSection {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px;
+  }
+  
+  /* Styles for individual detail containers */
+  .detailContainer {
+    display: flex;
+    width: 30%;
+    margin: 5px;
+    border: 2px solid grey;
+    background-color: #9ff3ff;
+    border-radius: 15px;
+    padding: 5px;
+    color: black;
+  }
+  
+  /* Styles for the button */
+  .detailButton {
+    width: 120px;
+    height: 30px;
+    align-self: flex-end;
+    justify-self: flex-end;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+  }
+  
+  .columnDetailContainer {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 5px 15px;
+    background-color: #9ff3ff;
+    border: 2px solid grey;
+    border-radius: 15px;
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .columnButton {
+    width: 100%;
+    height: 30px;
+    align-self: flex-end;
+    justify-self: flex-end;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    border: 0px;
+  }
+  
