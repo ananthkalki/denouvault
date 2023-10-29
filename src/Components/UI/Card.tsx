@@ -71,7 +71,7 @@ function Card(props: CardProps) {
           <div className={styles.detailContainer}>
             <div className={styles.gridContainer}>
                 <div className={styles.topLeft}>
-                <p style={{ fontSize: '17px', margin: '0' }}>Mallow earned</p>
+                <p style={{ fontSize: '17px', margin: '0' }}>ETH earned</p>
                 </div>
                 <div className={styles.bottomLeft}>
                 <p>0</p>

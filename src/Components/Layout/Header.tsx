@@ -8,7 +8,7 @@ function Header(){
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '15px',
-    backgroundColor: 'white',
+    backgroundColor: '#DF985A',
   };
 
   return (
